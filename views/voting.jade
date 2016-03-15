@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    div(class="content-wrapper")
+        div(class="container")
+            section(class="content-header")
+                h1
+            section(class="content" )
+                div(class="row")
+                    div(class="col-md-12")
+                        div(class="box box-primary", ng-controller='votingCTRL')
+                            div(class="box-header with-border")
+                                h3(class="box-title").
+                                    Candidate
+                            div(class="box-body", ng-repeat='candidate in candidates')
+                                button(class="btn btn-default btn-block", ng-click="save(candidate._id)")
+                                    {{candidate.name}}
+                                    &nbsp;
+
+
+    script(src="/javascripts/jQuery-2.1.4.min.js")
+    script(src="/bootstrap/js/bootstrap.min.js")
+    script(src="/datatables/jquery.dataTables.js")
+    script(src="/datatables/dataTables.bootstrap.js")
+    script(src="/javascripts/test.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js")
+    script(src="/javascripts/controller.js")
+    script(src="/javascripts/app.min.js")
+    script(src="/javascripts/demo.js")

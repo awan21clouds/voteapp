@@ -1,0 +1,30 @@
+doctype
+html(ng-app='VotingApp')
+    head
+        title= title
+        link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css")
+        link(rel="stylesheet", href="/datatables/dataTables.bootstrap.css")
+        link(rel='stylesheet', href='/stylesheets/AdminLTE.min.css')
+        link(rel='stylesheet', href='/stylesheets/skins/_all-skins.min.css')
+    body(class="hold-transition skin-blue layout-top-nav")
+        div(class="wrapper")
+                header(class="main-header")
+                    nav(class="navbar navbar-static-top")
+                        div(class="container")
+                            div(class="navbar-header")
+                                a(href="../../index2.html" class="navbar-brand")
+                                    b.
+                                        Free Code Camp
+                                button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse")
+                                    i(class="fa fa-bars")
+                            div(class="collapse navbar-collapse pull-left" id="navbar-collapse")
+                                ul(class="nav navbar-nav")
+                                    li
+                                        a(href="/candidate").
+                                            Candidate
+                                    li
+                                        a(href="/").
+                                            Register
+            block content

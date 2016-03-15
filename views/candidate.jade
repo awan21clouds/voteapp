@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    div(class="content-wrapper")
+        div(class="container")
+            section(class="content-header")
+                h1.
+            section(class="content", ng-controller='candidatCTRL')
+                div(class="row")
+                    div(class="col-md-12")
+                        div(class="box box-primary")
+                            div(class="box-header with-border")
+                                h3(class="box-title").
+                                    Candidate
+                            div(class="box-body")
+                                div(class="form-group")
+                                   label.
+                                       Name
+                                   input(type="text", class="form-control", placeholder="Enter name", ng-model="candidate.name")
+                            div(class="box-footer")
+                                button(class="btn btn-primary", ng-click="save()").
+                                   Save
+                    div(class="col-md-12")
+                        div(class="box box-primary")
+                            div(class="box-header with-border")
+                                h3(class="box-title").
+                                    Candidate
+                            div(class="box-body")
+                                table(id="dt-candidate" class="table table-bordered table-hover")
+                                    thead
+                                        tr
+                                            th.
+                                                Candidate name
+                                            th(width="130").
+                                    tbody
+                                        tr(ng-repeat='candidate in candidates')
+                                            td
+                                                {{candidate.name}}
+                                            td
+                                                button(class='btn btn-warning', ng-click="readById(candidate._id)").
+                                                    Update
+                                                &nbsp;
+                                                button(class='btn btn-danger', ng-click="delete(candidate._id)").
+                                                    Delete
+    script(src="/javascripts/jQuery-2.1.4.min.js")
+    script(src="/bootstrap/js/bootstrap.min.js")
+    script(src="/datatables/jquery.dataTables.js")
+    script(src="/datatables/dataTables.bootstrap.js")
+    script(src="/javascripts/test.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js")
+    script(src="/javascripts/controller.js")
+    script(src="/javascripts/app.min.js")
+    script(src="/javascripts/demo.js")
